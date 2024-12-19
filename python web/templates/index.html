@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Site</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src=""></script>
+  </head>
+  <body class="block">
+    <form>
+      <nav class="top-menu">
+        <a class="navbar-logo" href="/">
+          <img src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-quiz-logo-with-speech-bubble-symbols-png-image_6568572.png" width="100" height="100">
+        </a>
+        <ul class="menu-main">
+          <li><a href="{{ url_for('quiz') }}">Play</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">My quizes</a></li>
+          <li><a href="">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="base">
+        
+        <ul class="diff_menu">
+          <li>Начинающий</li>
+          <li>Бывалый</li>
+          <li>Про</li>
+        </ul>
+
+        <h2>Организуйте викторину для вашего мероприятия!</h2>
+        <p>Quiz — это облачная веб-платформа для взаимодействия с аудиторией,</p>
+        <p>предназначенная для проведения интерактивных викторин на личных,</p>    
+        <p>виртуальных и гибридных мероприятиях. Установка приложения не требуется.</p>
+        
+        <ul class="button_play">
+            <li><a href="{{ url_for('quiz') }}" class="button">начать</a></li>
+            <li><a href="{{ url_for('quiz') }}" class="button">пробный тест</a></li>
+          </ul>
+          
+
+      </div>
+
+      <footer class="site-footer">
+        <div class="bottom_menu">
+          <ul>
+            <li><a href="https://github.com/morsals1">https://github.com/morsals1</a></li>
+            <li><a href="https://support.microsoft.com/ru-ru">support: @gmail.com</a></li>
+            <li>© 2024 WaveAccess</li>
+          </ul>
+        </div>
+      </footer>
+
+    </form>
+  </body>
+</html>

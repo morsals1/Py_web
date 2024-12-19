@@ -1,0 +1,94 @@
+[
+  {
+    "question": "Что такое Flask?",
+    "choices": ["Python-фреймворк", "Язык программирования", "База данных", "Операционная система"],
+    "answer": "Python-фреймворк",
+    "level": "beginner"
+  },
+  {
+    "question": "Какой тип данных используется для хранения чисел с плавающей запятой?",
+    "choices": ["int", "float", "str", "bool"],
+    "answer": "float",
+    "level": "beginner"
+  },
+  {
+    "question": "Что такое HTML?",
+    "choices": ["Язык программирования", "Язык разметки", "Фреймворк", "База данных"],
+    "answer": "Язык разметки",
+    "level": "beginner"
+  },
+  {
+    "question": "Какой тег используется для создания гиперссылок в HTML?",
+    "choices": ["<link>", "<a>", "<href>", "<src>"],
+    "answer": "<a>",
+    "level": "beginner"
+  },
+  {
+    "question": "Что такое CSS?",
+    "choices": ["Язык разметки", "Язык стилей", "Система управления базами данных", "Программный язык"],
+    "answer": "Язык стилей",
+    "level": "beginner"
+  },
+
+  {
+    "question": "Какая функция в Python используется для получения длины строки?",
+    "choices": ["len()", "length()", "size()", "count()"],
+    "answer": "len()",
+    "level": "intermediate"
+  },
+  {
+    "question": "Какой оператор используется для возведения числа в степень в Python?",
+    "choices": ["^", "**", "//", "%%"],
+    "answer": "**",
+    "level": "intermediate"
+  },
+  {
+    "question": "Какой метод используется для добавления элемента в конец списка в Python?",
+    "choices": ["add()", "append()", "insert()", "push()"],
+    "answer": "append()",
+    "level": "intermediate"
+  },
+  {
+    "question": "Какое ключевое слово в Python используется для определения функции?",
+    "choices": ["def", "func", "function", "define"],
+    "answer": "def",
+    "level": "intermediate"
+  },
+  {
+    "question": "Какой метод в Python позволяет удалять элемент из списка по индексу?",
+    "choices": ["delete()", "remove()", "pop()", "discard()"],
+    "answer": "pop()",
+    "level": "intermediate"
+  },
+
+  {
+    "question": "Какая библиотека используется для работы с научными вычислениями в Python?",
+    "choices": ["Django", "Flask", "NumPy", "TensorFlow"],
+    "answer": "NumPy",
+    "level": "advanced"
+  },
+  {
+    "question": "Что такое REST в контексте веб-разработки?",
+    "choices": ["Фреймворк", "Протокол", "Стиль архитектуры", "Язык программирования"],
+    "answer": "Стиль архитектуры",
+    "level": "advanced"
+  },
+  {
+    "question": "Какая структура данных в Python используется для хранения уникальных элементов?",
+    "choices": ["Список", "Множество", "Словарь", "Массив"],
+    "answer": "Множество",
+    "level": "advanced"
+  },
+  {
+    "question": "Какой метод используется для чтения данных из файла в Python?",
+    "choices": ["read()", "open()", "file()", "readline()"],
+    "answer": "read()",
+    "level": "advanced"
+  },
+  {
+    "question": "Какая функция в Python используется для создания строки из символов?",
+    "choices": ["join()", "split()", "concat()", "merge()"],
+    "answer": "join()",
+    "level": "advanced"
+  }
+]

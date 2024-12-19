@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Site</title>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body class="block">
+    <form action="{{ url_for('quiz') }}" method="post">
+      <nav class="top-menu">
+        <a class="navbar-logo" href="/">
+          <img src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-quiz-logo-with-speech-bubble-symbols-png-image_6568572.png" width="100" height="100">
+        </a>
+        <ul class="menu-main">
+          <li><a href="{{ url_for('quiz') }}">Play</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">My quizes</a></li>
+          <li><a href="">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="quiz-container">
+        <h1>Викторина</h1>
+        {% for question in questions %}
+          <div class="question">
+            <p><strong>{{ loop.index }}. {{ question.question }}</strong></p>
+            <ul>
+              {% for choice in question.choices %}
+                <li>
+                  <label>
+                    <input type="radio" name="question{{ loop.index }}" value="{{ choice }}">
+                    {{ choice }}
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+        <button type="submit">Отправить ответы</button>
+      </div>
+    </form>
+
+    <footer class="site-footer">
+      <div class="bottom_menu">
+        <ul>
+          <li><a href="https://github.com/morsals1">https://github.com/morsals1</a></li>
+          <li><a href="https://support.microsoft.com/ru-ru">support: @gmail.com</a></li>
+          <li>© 2024 WaveAccess</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
