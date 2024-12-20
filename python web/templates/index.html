@@ -7,38 +7,34 @@
     <script src=""></script>
   </head>
   <body class="block">
-    <form>
+    <form id="difficultyForm" action="{{ url_for('select_difficulty') }}" method="post">
       <nav class="top-menu">
         <a class="navbar-logo" href="/">
           <img src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-quiz-logo-with-speech-bubble-symbols-png-image_6568572.png" width="100" height="100">
         </a>
         <ul class="menu-main">
-          <li><a href="{{ url_for('quiz') }}">Play</a></li>
+          <li><a href="{{ url_for('home') }}">Play</a></li>
           <li><a href="">About</a></li>
           <li><a href="">My quizes</a></li>
-          <li><a href="">Profile</a></li>
+          <li><a href="{{ url_for('profile') }}">Profile</a></li>
         </ul>
       </nav>
 
       <div class="base">
-        
         <ul class="diff_menu">
-          <li>Начинающий</li>
-          <li>Бывалый</li>
-          <li>Про</li>
+          <li><input type="radio" name="difficulty" value="beginner" required> Начинающий</li>
+          <li><input type="radio" name="difficulty" value="intermediate" required> Бывалый</li>
+          <li><input type="radio" name="difficulty" value="advanced" required> Про</li>
         </ul>
 
         <h2>Организуйте викторину для вашего мероприятия!</h2>
         <p>Quiz — это облачная веб-платформа для взаимодействия с аудиторией,</p>
-        <p>предназначенная для проведения интерактивных викторин на личных,</p>    
+        <p>предназначенная для проведения интерактивных викторин на личных,</p>
         <p>виртуальных и гибридных мероприятиях. Установка приложения не требуется.</p>
-        
-        <ul class="button_play">
-            <li><a href="{{ url_for('quiz') }}" class="button">начать</a></li>
-            <li><a href="{{ url_for('quiz') }}" class="button">пробный тест</a></li>
-          </ul>
-          
 
+        <ul class="button_play">
+          <li><button type="submit" name="action" value="start" class="button">начать</button></li>
+        </ul>
       </div>
 
       <footer class="site-footer">
@@ -50,7 +46,16 @@
           </ul>
         </div>
       </footer>
-
     </form>
+
+    <script>
+      document.getElementById('difficultyForm').addEventListener('submit', function(event) {
+        const difficulty = document.querySelector('input[name="difficulty"]:checked');
+        if (!difficulty) {
+          event.preventDefault();
+          alert('Пожалуйста, выберите уровень сложности.');
+        }
+      });
+    </script>
   </body>
 </html>

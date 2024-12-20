@@ -15,29 +15,15 @@
                 <li><a href="{{ url_for('home') }}">Play</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My quizes</a></li>
-                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="#">Profile</a></li>
             </ul>
         </nav>
 
-        <div class="quiz-container">
-            <h1>Викторина</h1>
-            {% for question in questions %}
-                <div class="question">
-                    <p><strong>{{ loop.index }}. {{ question.question }}</strong></p>
-                    <ul>
-                        {% for choice in question.choices %}
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="question{{ loop.index0 }}" value="{{ choice }}">
-                                    {{ choice }}
-                                </label>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endfor %}
-            <button type="submit" name="action" value="start">Отправить ответы</button>
+        <div class="base">
+            <h2>Это твой профиль</h2>
+            <p></p>
         </div>
+
     </form>
 
     <footer class="site-footer">

@@ -125,7 +125,7 @@ body {
     margin: 0;
 }
 
-.diff_menu li {
+.diff_menu li  {
     background-color: #F73E24; 
     color: white;
     font-size: 24px;
